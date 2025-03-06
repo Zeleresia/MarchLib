@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet("https://github.com/Zeleresia/MarchLib/blob/main/Marchy-UI/March-Lib1.lua"))();
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zeleresia/MarchLib/refs/heads/main/Marchy-UI/March-Lib1.lua"))();
 
 local Window1 = library:CreateWindow("Marchy HUB");
 Window1:Box("Box", function()
