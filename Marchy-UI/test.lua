@@ -36,7 +36,13 @@ function MarchyUI:newWindow(title, width, height)
         sliderBar.Size = UDim2.new(relativePosition, 0, 1, 0)
         sliderLabel.Text = "Slider Value: " .. sliderValue
     end
-
+    function MarchyUI:CreateWindow(title, width, height)
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+        local window = self:newWindow(title, width, height)
+        window.Parent = screenGui
+        return window
+    end
     slider.InputBegan:Connect(function(input)
         if input.UserInputType == Enum.UserInputType.MouseButton1 then
             updateSlider(input)
